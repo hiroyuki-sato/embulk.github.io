@@ -1,3 +1,5 @@
+---
+---
 /*
  * haiku.css_t
  * ~~~~~~~~~~~
@@ -26,7 +28,7 @@
 html {
     margin: 0px;
     padding: 0px;
-    background: #FFF url(bg-page.png) top left repeat-x;
+    background: #FFF url({{ "/assets/images/bg-page.png" | relative_url }}) top left repeat-x;
 }
 
 body {
@@ -228,12 +230,12 @@ div.admonition {
 }
 div.note {
     padding: 10px 15px 10px 80px;
-    background: #e4ffde url(alert_info_32.png) 15px 15px no-repeat;
+    background: #e4ffde url({{ "/assets/images/alert_info_32.png" | relative_url }}) 15px 15px no-repeat;
     min-height: 42px;
 }
 div.warning {
     padding: 10px 15px 10px 80px;
-    background: #fffbc6 url(alert_warning_32.png) 15px 15px no-repeat;
+    background: #fffbc6 url({{ "/assets/images/alert_warning_32.png" | relative_url }}) 15px 15px no-repeat;
     min-height: 42px;
 }
 div.seealso {
@@ -296,7 +298,7 @@ div.content ul > li {
     -moz-background-clip:border;
     -moz-background-inline-policy:continuous;
     -moz-background-origin:padding;
-    background: transparent url(bullet_orange.png) no-repeat scroll left 0.45em;
+    background: transparent url({{ "/assets/images/bullet_orange.png" | relative_url }}) no-repeat scroll left 0.45em;
     list-style-image: none;
     list-style-type: none;
     padding: 0 0 0 1.666em;
