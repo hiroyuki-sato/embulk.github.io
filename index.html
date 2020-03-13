@@ -20,7 +20,7 @@
       <li><a href="https://plugins.embulk.org/">The list of Embulk plugins</a>
     </ul>
 
-    <h2>Recent articles</h2>
+    <h2>Recent articles (<a href="{{ "/feed.xml" | relative_url }}">RSS</a>)</h2>
     <ul class="simple">
       {% for post in site.posts limit:5 %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
