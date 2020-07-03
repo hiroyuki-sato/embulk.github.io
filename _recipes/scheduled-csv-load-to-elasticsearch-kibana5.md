@@ -1,9 +1,11 @@
 ---
 layout: posts
 title: "Scheduled bulk data loading to Elasticsearch + Kibana 5 from CSV files"
-date: 2017-03-29 17:23:51 +0900
-last_modified_at: 2020-07-03 16:45:48 +0900
-author: "hiroyuki-sato"
+date: 2015-02-24 14:46:37 -0800
+last_modified_at: 2020-07-03 17:56:55 +0900
+authors:
+- "frsyuki"
+- "hiroyuki-sato"
 ---
 
 This article shows how to:

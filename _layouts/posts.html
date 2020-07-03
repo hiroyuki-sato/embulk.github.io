@@ -19,7 +19,22 @@
       </section>
       <section id="collation">
         <ul>
+{% if page.author %}
           <li>Author: <a href="https://github.com/{{ page.author }}">@{{ page.author }}</a></li>
+{% endif %}
+{% if page.authors %}
+{% assign authorCount = page.authors | size %}
+{% if authorCount == 0 %}
+{% elsif authorCount == 1 %}
+          <li>Author: <a href="https://github.com/{{ page.authors | first }}">@{{ page.authors | first }}</a></li>
+{% else %}
+          <li>Authors:
+    {% for author in page.authors %}
+            <a href="https://github.com/{{ author }}">@{{ author }}</a>
+    {% endfor %}
+          </li>
+{% endif %}
+{% endif %}
           <li>Created at: {{ page.date | date: "%B %d, %Y" }}</li>
         </ul>
       </section>
