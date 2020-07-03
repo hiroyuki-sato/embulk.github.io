@@ -23,6 +23,22 @@ p > code {
     color: #333333;
 }
 
+pre {
+    background-color: #eeeeee;
+    margin-left: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    overflow-x: auto;
+}
+
+pre > code {
+    font-family: 'Roboto Mono', monospace;
+    line-height: 180%;
+    color: black;
+}
+
 body {
     margin: 0px;
     padding: 0px;
@@ -175,22 +191,6 @@ div.two-columns > div.left, div.right {
 
 body#index main section#abstract ul > li {
     line-height: 150%;
-}
-
-body#index main section#quick-start pre {
-    background-color: #eeeeee;
-    margin-left: 1em;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    overflow-x: auto;
-}
-
-body#index main section#quick-start pre > code {
-    font-family: 'Roboto Mono', monospace;
-    line-height: 180%;
-    color: black;
 }
 
 body#page section {

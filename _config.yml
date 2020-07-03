@@ -35,3 +35,6 @@ collections:
   posts:
     output: true
     permalink: /articles/:year/:month/:day/:title:output_ext
+  recipes:
+    output: true
+    permalink: /recipes/:title:output_ext
