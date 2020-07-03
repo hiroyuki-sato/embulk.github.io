@@ -58,12 +58,25 @@ header {
 
 header nav h1 {
     display: inline;
+}
+
+header nav h1 span.embulk {
     font-family: 'Ubuntu', sans-serif;
     font-size: 28px;
 }
 
-header nav h1 a {
+header nav h1 span.subtitle {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+}
+
+header nav h1 span.embulk a {
     color: #000000;
+    text-decoration: none;
+}
+
+header nav h1 span.subtitle a {
+    color: #333333;
     text-decoration: none;
 }
 
