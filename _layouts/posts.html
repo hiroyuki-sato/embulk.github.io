@@ -4,29 +4,27 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>{{ page.title }}</title>
-<link rel="stylesheet" href={{ "/assets/css/haiku.css" | relative_url }} type="text/css" />
-<link rel="stylesheet" href={{ "/assets/css/pygments.css" | relative_url }} type="text/css" />
+<title>Embulk: {{ page.title }}</title>
+<link rel="stylesheet" href="{{ "/assets/css/embulk.css" | relative_url }}" type="text/css" />
 </head>
-<body>
-  <div class="header">
-    <h1 class="heading"><span>{{ site.title }}</span></h1>
-  </div>
-
-  <div class="content">
-    <h2>{{ page.title }}</h2>
-    {{ content }}
-  </div>
-
-  <div class="collation">
-    <ul>
-      <li>Author: <a href="https://github.com/{{ page.author }}">@{{ page.author }}</a></li>
-      <li>Created at: {{ page.date | date: "%B %d, %Y" }}</li>
-    </ul>
-  </div>
-
-  <div class="footer">
-    Copyright 2015-2020 The Embulk project
-  </div>
+<body id="post">
+  {% include header.html %}
+  <main>
+    <article>
+      <section id="article">
+        <h2>{{ page.title }}</h2>
+        <div class="content">
+          {{ content }}
+        </div>
+      </section>
+      <section id="collation">
+        <ul>
+          <li>Author: <a href="https://github.com/{{ page.author }}">@{{ page.author }}</a></li>
+          <li>Created at: {{ page.date | date: "%B %d, %Y" }}</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+  {% include footer.html %}
 </body>
 </html>

@@ -1,35 +1,81 @@
 ---
+layout: default
+title: Embulk
+body_id: index
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Embulk | plugin-based parallel bulk data loader</title>
-<link rel="stylesheet" href={{ "/assets/css/haiku.css" | relative_url }} type="text/css" />
-<link rel="stylesheet" href={{ "/assets/css/pygments.css" | relative_url }} type="text/css" />
-</head>
-<body>
-  <div class="header">
-    <h1 class="heading"><a href="https://www.embulk.org/"><span>Embulk</span></a></h1>
+<section id="summary">
+  <blockquote id="summary">
+    <div class="summary-main">Pluggable, Multi-source/destination, Open-sourced Bulk Data Loader</div>
+    <div class="summary-aside">to/from databases, storages, file formats, cloud services, ...</div>
+  </blockquote>
+  <hr/>
+</section>
+
+<div class="two-columns">
+  <div class="left">
+    <section id="releases">
+      <h2>Latest Releases</h2>
+      <dl>
+        <dt>Stable</dt>
+        <dd><a href="https://github.com/embulk/embulk/releases/tag/v0.9.23">v0.9.23</a></dd>
+        <dt>Development</dt>
+        <dd><a href="https://github.com/embulk/embulk/releases/tag/v0.10.5">v0.10.5</a></dd>
+      </dl>
+      <p>Look into <a href="{{ "articles/2020/07/01/meetup-20200709.html" | relative_url }}">this article</a> on the stable and development versions.</p>
+    </section>
+
+    <section id="articles">
+      <h2>Recent Articles</h2>
+      <ul class="posts">
+        {% for post in site.posts limit:5 %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+        <li>... <a href="{{ "/articles" | relative_url }}">more</a> (<a href="{{ "/feed.xml" | relative_url }}">Feed</a>)</li>
+      </ul>
+    </section>
+
+    <hr id="before-abstract"/>
+
+    <section id="abstract">
+      <p>Embulk is a bulk data loader. It helps data transfer between types of databases, storages, file formats, cloud services, and else.</p>
+      <p>Embulk supports:</p>
+      <ul>
+        <li>Combination of input and output from varieties of plugins
+        <li>Plugins released in Maven and Ruby gem repositories
+        <li>Automated guess of input file formats
+        <li>Parallel execution to deal with big data sets
+        <li>Transaction control to guarantee all-or-nothing
+      </ul>
+    </section>
+
+    <hr id="after-abstract"/>
   </div>
 
-  <div class="content">
-    <h2>Pages</h2>
-    <ul class="simple">
-      <li><a href="https://www.embulk.org/docs/">The main document</a><!-- Maintained in https://github.com/embulk/docs -->
-      <li><a href="https://plugins.embulk.org/">The list of Embulk plugins</a>
-    </ul>
+  <div class="right">
+    <section id="quick-start">
+      <h2>Quick Start</h2>
+      <h3>Linux & macOS</h3>
+<pre><code>curl --create-dirs -o ~/.embulk/bin/embulk -L "https://dl.embulk.org/embulk-latest.jar"
+chmod +x ~/.embulk/bin/embulk
+echo 'export PATH="$HOME/.embulk/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc</code></pre>
 
-    <h2>Recent articles (<a href="{{ "/feed.xml" | relative_url }}">RSS</a>)</h2>
-    <ul class="simple">
-      {% for post in site.posts limit:5 %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </div>
+      <h3>Windows</h3>
+      <pre><code>PowerShell -Command "& {[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::TLS12; Invoke-WebRequest http://dl.embulk.org/embulk-latest.jar -OutFile embulk.bat}"</code></pre>
 
-  <div class="footer">
-    Copyright 2015-2020 The Embulk project.
-  </div>
-</body>
-</html>
+      <h3>Next steps</h3>
+      <p>The <code>embulk example</code> command generates an example CSV file.</p>
+      <p>You can try Embulk quickly by:</p>
+<pre><code>embulk example ./try1
+embulk guess ./try1/seed.yml -o config.yml
+embulk preview config.yml
+embulk run config.yml
+</code></pre>
+    </section>
+
+    <section id="presentation">
+      <h2>Presentation</h2>
+      <iframe src="//www.slideshare.net/slideshow/embed_code/key/LwOKhmDfNSv4vA?startSlide=15" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen></iframe>
+    </section>
+  </div> <!-- right -->
+</div> <!-- two-columns -->

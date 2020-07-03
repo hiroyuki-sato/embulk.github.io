@@ -29,7 +29,7 @@ exclude:
   - CNAME
   - Gemfile
   - Gemfile.lock
-  - vendor/bundle
+  - vendor/
 
 collections:
   posts:
