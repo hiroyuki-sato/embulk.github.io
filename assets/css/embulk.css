@@ -58,6 +58,8 @@ header {
 
 header nav h1 {
     display: inline;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 header nav h1 span.embulk {
