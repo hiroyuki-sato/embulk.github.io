@@ -38,3 +38,8 @@ collections:
   recipes:
     output: true
     permalink: /recipes/:title:output_ext
+
+feed:
+  collections:
+    posts:
+      path: "/articles/feed.xml"
