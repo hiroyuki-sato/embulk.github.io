@@ -4,7 +4,7 @@ title: Embulk
 body_id: index
 ---
 <section id="summary">
-  <blockquote id="summary">
+  <blockquote id="summary-block">
     <div class="summary-main">Pluggable, Multi-source/destination, Open-sourced Bulk Data Loader</div>
     <div class="summary-aside">to/from databases, storages, file formats, cloud services, ...</div>
   </blockquote>
@@ -54,14 +54,14 @@ body_id: index
   <div class="right">
     <section id="quick-start">
       <h2>Quick Start</h2>
-      <h3>Linux & macOS</h3>
+      <h3>Linux &amp; macOS</h3>
 <pre><code>curl --create-dirs -o ~/.embulk/bin/embulk -L "https://dl.embulk.org/embulk-latest.jar"
 chmod +x ~/.embulk/bin/embulk
-echo 'export PATH="$HOME/.embulk/bin:$PATH"' >> ~/.bashrc
+echo 'export PATH="$HOME/.embulk/bin:$PATH"' &gt;&gt; ~/.bashrc
 source ~/.bashrc</code></pre>
 
       <h3>Windows</h3>
-      <pre><code>PowerShell -Command "& {[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::TLS12; Invoke-WebRequest http://dl.embulk.org/embulk-latest.jar -OutFile embulk.bat}"</code></pre>
+      <pre><code>PowerShell -Command "&amp; {[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::TLS12; Invoke-WebRequest http://dl.embulk.org/embulk-latest.jar -OutFile embulk.bat}"</code></pre>
 
       <h3>Next steps</h3>
       <p>The <code>embulk example</code> command generates an example CSV file.</p>
@@ -75,7 +75,7 @@ embulk run config.yml
 
     <section id="presentation">
       <h2>Presentation</h2>
-      <iframe src="//www.slideshare.net/slideshow/embed_code/key/LwOKhmDfNSv4vA?startSlide=15" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen></iframe>
+      <iframe src="https://www.slideshare.net/slideshow/embed_code/key/LwOKhmDfNSv4vA?startSlide=15" class="slideshare" title="Slideshare: Embulk, an open-source plugin-based parallel bulk data loader" width="510" height="420" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="max-width: 100%;" allowfullscreen></iframe>
     </section>
   </div> <!-- right -->
 </div> <!-- two-columns -->

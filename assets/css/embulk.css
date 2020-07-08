@@ -114,6 +114,12 @@ aside.hint > p {
     margin-left: 1em;
 }
 
+iframe#slideshare {
+    border: 1px solid #cccccc;
+    margin-bottom: 5px;
+    max-width: 100%;
+}
+
 body {
     margin: 0px;
     padding: 0px;
@@ -209,14 +215,14 @@ body#index main section#summary {
     text-align: center;
 }
 
-body#index main section#summary blockquote#summary div.summary-main {
+body#index main section#summary blockquote#summary-block div.summary-main {
     font-weight: bold;
     font-size: 24px;
 
     margin: 0.5em 1em 0.5em 1em;
 }
 
-body#index main section#summary blockquote#summary div.summary-aside {
+body#index main section#summary blockquote#summary-block div.summary-aside {
     font-weight: italic;
     font-size: 18px;
 
