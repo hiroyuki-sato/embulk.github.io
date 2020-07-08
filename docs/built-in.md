@@ -4,8 +4,7 @@ title: "Embulk: Configuration"
 body_id: page
 ---
 
-Embulk configuration file format
----------------------------------
+<h2 id="embulk-configuration-file-format">Embulk configuration file format</h2>
 
 Embulk uses a YAML file to define a bulk data loading. Here is an example of the file:
 
@@ -106,9 +105,7 @@ With above 2 files, actual configuration file will be:
       type: stdout
 
 
-
-Local file input plugin
-------------------------
+<h2 id="local-file-input-plugin">Local file input plugin</h2>
 
 The ``file`` input plugin reads files from local file system.
 
@@ -156,8 +153,8 @@ For example, if you set ``last_path: /path/to/files/sample_02.csv``, Embulk read
 
 In most of cases, you'll use guess to configure the parser and decoders. See also [Quick Start](https://github.com/embulk/embulk#quick-start).
 
-CSV parser plugin
-------------------
+
+<h2 id="csv-parser-plugin">CSV parser plugin</h2>
 
 The ``csv`` parser plugin parses CSV and TSV files.
 
@@ -264,8 +261,8 @@ filters:
       - {name: timestamp_in_millis, from_unit: ms}</code></pre>
 </aside>
 
-JSON parser plugin
--------------------
+
+<h2 id="json-parser-plugin">JSON parser plugin</h2>
 
 The ``json`` parser plugin parses a JSON file that contains a sequence of JSON objects. Example:
 
@@ -315,8 +312,8 @@ The ``columns`` option declares the list of columns, and the way how to extract 
         - {name: ip, type: string}
         - {name: name, type: string}
 
-Gzip decoder plugin
---------------------
+
+<h2 id="gzip-decoder-plugin">Gzip decoder plugin</h2>
 
 The ``gzip`` decoder plugin decompresses gzip files before input plugins read them.
 
@@ -332,8 +329,7 @@ This plugin doesn't have any options.
       - {type: gzip}
 
 
-BZip2 decoder plugin
----------------------
+<h2 id="bzip2-decoder-plugin">BZip2 decoder plugin</h2>
 
 The ``bzip2`` decoder plugin decompresses bzip2 files before input plugins read them.
 
@@ -349,8 +345,7 @@ This plugin doesn't have any options.
       - {type: bzip2}
 
 
-File output plugin
--------------------
+<h2 id="file-output-plugin">File output plugin</h2>
 
 The ``file`` output plugin writes records to local file system.
 
@@ -384,8 +379,8 @@ For example, if you set ``path_prefix: /path/to/output/sample_``, ``sequence_for
       formatter:
         ...
 
-CSV formatter plugin
----------------------
+
+<h2 id="csv-formatter-plugin">CSV formatter plugin</h2>
 
 The ``csv`` formatter plugin formats records using CSV or TSV format.
 
@@ -446,8 +441,8 @@ The ``column_options`` option is a map whose keys are name of columns, and value
           mycol1: {format: '%Y-%m-%d %H:%M:%S'}
           mycol2: {format: '%Y-%m-%d %H:%M:%S', timezone: 'America/Los_Angeles'}
 
-Gzip encoder plugin
---------------------
+
+<h2 id="gzip-encoder-plugin">Gzip encoder plugin</h2>
 
 The ``gzip`` encoder plugin compresses output files using gzip.
 
@@ -466,8 +461,7 @@ The ``gzip`` encoder plugin compresses output files using gzip.
         level: 1
 
 
-BZip2 encoder plugin
----------------------
+<h2 id="bzip2-encoder-plugin">BZip2 encoder plugin</h2>
 
 The ``bzip2`` encoder plugin compresses output files using bzip2.
 
@@ -486,8 +480,7 @@ The ``bzip2`` encoder plugin compresses output files using bzip2.
         level: 6
 
 
-Rename filter plugin
----------------------
+<h2 id="rename-filter-plugin">Rename filter plugin</h2>
 
 The ``rename`` filter plugin changes column names. This plugin has no impact on performance.
 
@@ -688,8 +681,8 @@ The rule ``unique_number_suffix`` makes column names unique in the schema by suf
 <p><code>columns</code> are applied before <code>rules</code> if <code>columns</code> and <code>rules</code> are specified together. (It is discouraged to specify them together, though.)</p>
 </aside>
 
-Remove columns filter plugin
------------------------------
+
+<h2 id="remove-columns-filter-plugin">Remove columns filter plugin</h2>
 
 The ``remove_columns`` filter plugin removes columns from schema.
 
@@ -712,8 +705,7 @@ remove: and keep: options are not multi-select.
         remove: ["_c0", "_c1"]
 
 
-Local executor plugin
-----------------------
+<h2 id="local-executor-plugin">Local executor plugin</h2>
 
 The ``local`` executor plugin runs tasks using local threads. This is the only built-in executor plugin.
 
@@ -741,8 +733,8 @@ The ``min_output_tasks`` option enables "page scattering". The feature is enable
       type: ...
       ...
 
-Guess executor
----------------
+
+<h2 id="guess-executor">Guess executor</h2>
 
 The guess executor is called by ``guess`` command. It executes default guess plugins in a sequential order and suggests Embulk config by appropriate guess plugin. The default guess plugins and the order are ``gzip``, ``'bzip2``, ``json`` and ``csv``.
 
@@ -774,8 +766,8 @@ This example shows how to use ``csv_all_strings`` guess plugin, which suggests c
       type: ...
       ...
 
-Preview executor
-----------------
+
+<h2 id="preview-executor">Preview executor</h2>
 
 The preview executor is called by ``preview`` command. It tries to read sample buffer from a specified input source and writes them to Page objects. ``preview`` outputs the Page objects to console.
 
