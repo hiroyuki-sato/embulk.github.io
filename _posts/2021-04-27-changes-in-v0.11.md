@@ -2,6 +2,7 @@
 layout: posts
 title: "For Embulk users: What will change in v0.11 and v1.0?"
 date: 2021-04-27 18:33:55 +0900
+last_modified_at: 2021-04-27 18:37:30 +0900
 author: "dmikurube"
 ---
 
@@ -39,7 +40,7 @@ Then, `embulk.properties` (in [Java `.properties` file format](https://docs.orac
 
 The Embulk System Property `embulk_home` is finally reset forcibly to an absolute path of the directory identified.
 
-#### `m2_repo`, `gem_home`, and `gem_path`
+#### m2_repo, gem_home, and gem_path
 
 The next important directory settings are: where Embulk plugins are loaded from. They are configured in the Embulk System Properties `m2_repo`, `gem_home`, and `gem_path`, and from the Embulk home directory.
 
@@ -60,7 +61,7 @@ It may seem annoying for you. But, a good point is that you can specify your pre
 
 On the other hand, we are going to encourage Maven-based pure-Java plugins throughout v0.11 and later versions so that we won't need JRuby in most cases.
 
-#### `embulk.gem` and `msgpack.gem`
+#### embulk.gem and msgpack.gem
 
 In addition to configuring `jruby`, users will have to install [`embulk.gem`](https://rubygems.org/gems/embulk) with the same versio
 n as the Embulk core. Note that this `embulk.gem` (after v0.10) is totally different from `embulk.gem` of the ancient v0.8 age. The new ones contain only `.rb` files to bridge the Embulk core and Ruby gem-based plugins.
