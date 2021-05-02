@@ -22,7 +22,7 @@ Java Properties actually have weaker expressiveness than `ConfigSource`, which i
 
 Embulk's old System Config had not used the strong expressiveness of `ConfigSource`. The command line option `-X` for System Config was just to set a string value for a string key, which was equivalent to Properties. Some internal System Configs had used more complex structures like lists, but they could represented as strings. In fact, we did not need the expressiveness of `ConfigSource`.
 
-From user's point of view, you won't see clear loss from the old System Config. On the other hand, you'll receive benefits from the power of Properties as described below.
+From user's point of view, you won't see clear loss from the old System Config. On the other hand, you'll receive benefits as described below from the power of Properties.
 
 #### Embulk home
 
@@ -46,12 +46,12 @@ The next important directory settings are: where Embulk plugins are loaded from.
 
 The Embulk System Properties `gem_home` and `gem_path` are used to configure JRuby by calling [`Gem.use_paths`](https://www.rubydoc.info/stdlib/rubygems/Gem.use_paths). Note that environment variables `GEM_HOME` and `GEM_PATH` are untouched. The Gem configurations could be reset unexpecteldy with the environment variables in case `Gem.clear_paths` is called somewhere.
 
+They are configured in the following rule including `m2_repo` for Maven artifacts.
+
 1. If Embulk System Properties `m2_repo`, `gem_home`, or `gem_path` are set from the command line (`-X`), the Embulk System Propertis are set to those in the highest priority. The settings should be absolute paths, or relative paths from the working directory ([Java `user.dir`](https://docs.oracle.com/javase/tutorial/essential/environment/sysprop.html)). Then, these Embulk System Properties are reset to their absolute paths.
 2. If Embulk System Property `m2_repo`, `gem_home`, or `gem_path` are set in the `embulk.properties` file, the Embulk System Properties are set to those in the second priority. The settings should be absolute paths, or relative paths from the Embulk home directory. Then, these Embulk System Properties are reset to their absolute paths.
 3. If environment variables `M2_REPO`, `GEM_HOME`, or `GEM_PATH` are set, the corresponding Embulk System Properties are set to those in the third priority. The settings should be absolute paths.
 4. If none of the above does not match, `m2_repo` is set to `${embulk_home}/lib/m2/repository`, `gem_home` is set to `${embulk_home}/lib/gems`, and `gem_path` is set to empty.
-
-The Embulk System Properties `m2_repo`, `gem_home`, and `gem_path` are finally reset forcibly to absolute paths of the directories identified.
 
 ### JRuby
 
@@ -63,16 +63,25 @@ On the other hand, we are going to encourage Maven-based pure-Java plugins throu
 
 #### embulk.gem and msgpack.gem
 
-In addition to configuring `jruby`, users will have to install [`embulk.gem`](https://rubygems.org/gems/embulk) with the same versio
-n as the Embulk core. Note that this `embulk.gem` (after v0.10) is totally different from `embulk.gem` of the ancient v0.8 age. The new ones contain only `.rb` files to bridge the Embulk core and Ruby gem-based plugins.
+In addition to configuring `jruby`, users will have to install [`embulk.gem`](https://rubygems.org/gems/embulk) with the same version as the Embulk core. Note that this `embulk.gem` (after v0.10) is totally different from `embulk.gem` of the ancient v0.8 age. The new ones contain only `.rb` files to bridge the Embulk core and Ruby gem-based plugins.
 
 Users will have to install [`msgpack.gem`](https://rubygems.org/gems/msgpack) explicitly as well. Although the Embulk core team has tested only with `msgpack:1.1.0-java`, we expect that the later versions (Java variant) should work fine.
+
+```
+embulk gem install msgpack -v 1.1.0
+embulk gem install embulk -v X.Y.Z
+```
 
 #### Bundler and Liquid
 
 [Bundler](https://bundler.io/) and [Liquid](https://shopify.github.io/liquid/) are no longer bundled with Embulk, too. Users who want to use Bundler and/or Liquid will have to install them by themselves.
 
 Alhtough the Embulk core has tested only with Bundler 1.16.0 and Liquid 4.0.0, later versions may work. Your contributions are welcome to check if they work.
+
+```
+embulk gem install bundler -v 1.16.0
+embulk gem install liquid -v 4.0.0
+```
 
 ### Examples of Embulk System Properties
 
