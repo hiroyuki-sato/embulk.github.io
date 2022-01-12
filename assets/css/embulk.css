@@ -89,3 +89,18 @@ main a:hover, a:active {
     text-decoration: underline;
     color: #ff4500;
 }
+
+footer {
+    background-color: #eeeeee;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5em;
+    border-top: solid 1px #cccccc;
+}
+
+footer > p.copyright {
+    text-align: center;
+    font-size: 11px;
+    margin: 0px;
+    padding: 0px;
+}

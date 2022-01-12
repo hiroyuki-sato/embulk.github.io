@@ -253,18 +253,3 @@ body#post main article section#collation a {
     color: #333333;
     font-weight: normal;
 }
-
-footer {
-    background-color: #eeeeee;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0.5em;
-    border-top: solid 1px #cccccc;
-}
-
-footer > p.copyright {
-    text-align: center;
-    font-size: 11px;
-    margin: 0px;
-    padding: 0px;
-}
