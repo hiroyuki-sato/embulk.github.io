@@ -116,24 +116,6 @@ iframe#slideshare {
     max-width: 100%;
 }
 
-main a {
-    font-weight: bold;
-    text-decoration: none;
-    color: #dc3c01;
-}
-
-main a:visited {
-    font-weight: bold;
-    text-decoration: none;
-    color: #892601;
-}
-
-main a:hover, a:active {
-    font-weight: bold;
-    text-decoration: underline;
-    color: #ff4500;
-}
-
 body#home main section#summary {
     padding-top: 1em;
     padding-bottom: 3.5em;
@@ -219,37 +201,6 @@ body#home main section#abstract ul > li {
     line-height: 150%;
 }
 
-body#page section {
-    margin: 3em;
-}
-
-body#post main article {
-    margin: 3em;
-}
-
-body#post main article h2 {
-    font-size: 130%;
-    padding-bottom: 3px;
-    margin-bottom: 1em;
-    border-bottom: solid 1px #cccccc;
-}
-
 ul.posts {
     line-height: 180%;
-}
-
-body#post main article section#collation {
-    font-size: 90%;
-    font-weight: normal;
-    text-align: right;
-}
-
-body#post main article section#collation ul > li {
-    list-style-image: none;
-    list-style-type: none;
-}
-
-body#post main article section#collation a {
-    color: #333333;
-    font-weight: normal;
 }

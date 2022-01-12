@@ -3,104 +3,117 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
 
 body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    background-color: #ffffff;
     font-family: 'Noto Sans', sans-serif;
-    color: #666666;
 }
 
 header {
-    background-color: #eeeeee;
-    position: -webkit-sticky;
-    position: sticky;
-    padding: 0.5em;
-    margin-bottom: 3em;
-    border-bottom: solid 1px #cccccc;
+    display: flex;
+    margin: 0;
+    padding: 0.5rem;
+    top: 0;
+    overflow: hidden;
+    background-color: #ffeedd;
+    border-bottom: solid 1px #cc9966;
+}
+
+header div#logo-title {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    white-space: nowrap;
+}
+
+header div#logo-title img#embulk-logo {
+    margin: 0 0 6px 4px;
+    padding: 0;
+    top: 0;
+    width: 5.6rem;
+    height: 3.2rem;
+    vertical-align: top;
+}
+
+header div#logo-title h1#embulk-title {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    vertical-align: bottom;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+}
+
+header div#logo-title h1#embulk-title a {
+    color: #222222;
+    text-decoration: none;
+}
+
+header div#logo-title h1#embulk-title a:hover {
+    text-decoration: underline;
+}
+
+header div#top-menu {
+    margin: auto 0 0 auto;
+    padding: 0;
     top: 0;
 }
 
-header nav h1 {
-    display: inline;
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
+header div#top-menu nav#top-navigation {
+    margin: 0;
+    padding: 0;
 }
 
-header nav h1 span.embulk {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 28px;
+header div#top-menu nav#top-navigation ul {
+    margin: 0;
+    padding: 0;
 }
 
-header nav h1 span.subtitle {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 14px;
-}
-
-header nav h1 span.embulk a {
-    color: #000000;
-    text-decoration: none;
-}
-
-header nav h1 span.subtitle a {
-    color: #333333;
-    text-decoration: none;
-}
-
-header nav h1 span.embulk a:hover {
-    text-decoration: underline;
-}
-
-header nav h1 span.subtitle a:hover {
-    text-decoration: underline;
-}
-
-header nav ul {
-    float: right;
-}
-
-header nav ul li {
+header div#top-menu nav#top-navigation ul li {
     display: inline;
     text-decoration: none;
-    padding: 0 10px !important;
+    padding: 0 1rem !important;
 }
 
-header nav ul li a {
+header div#top-menu nav#top-navigation ul li a {
     color: #666666;
     text-decoration: none;
 }
 
-header nav ul li a:hover {
+header div#top-menu nav#top-navigation ul li a:hover {
     text-decoration: underline;
+}
+
+main {
+    margin: 2rem 0 0 0;
+    color: #333333;
 }
 
 main a {
-    font-weight: bold;
     text-decoration: none;
-    color: #dc3c01;
+    color: #993300;
 }
 
-main a:visited {
-    font-weight: bold;
-    text-decoration: none;
-    color: #892601;
-}
-
-main a:hover, a:active {
-    font-weight: bold;
+main a:hover {
     text-decoration: underline;
-    color: #ff4500;
+    color: #cc3300;
 }
 
 footer {
-    background-color: #eeeeee;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0.5em;
-    border-top: solid 1px #cccccc;
+    margin: 0;
+    padding: 1rem;
+    bottom: 0;
+    background-color: #999999;
+    border-top: solid 1px #666666;
 }
 
-footer > p.copyright {
-    text-align: center;
-    font-size: 11px;
-    margin: 0px;
-    padding: 0px;
+footer p.copyright {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    font-size: 0.8rem;
 }
