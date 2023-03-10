@@ -1,7 +1,8 @@
 ---
 layout: posts
-title: "Embulk maintenance gets open"
-date: 2023-03-10 11:50:00 +0900
+title: "Embulk maintenance goes open"
+date: 2023-03-10 15:43:30 +0900
+last_modified_at: 2023-03-10 16:21:00 +0900
 author: "dmikurube"
 ---
 
@@ -83,7 +84,7 @@ Listed in the order of their responses to join the core team.
 Why to get open?
 -----------------
 
-By maintaining the Embulk core exclusively by Treasure Data, we sometimes had biased viewpoints about compatibility checks and reviews, and suspended development for a while for some in-house reasons. We sometimes broke the compatibility unintentionally. We had a half year internal between Embulk v0.10.35 to v0.10.36, and 4 months between Embulk v0.10.36 and v0.10.37.
+By maintaining the Embulk core exclusively by Treasure Data, we sometimes had biased viewpoints about compatibility checks and reviews, and suspended development for a while for some in-house reasons. We sometimes broke the compatibility unintentionally. We had a half year interval between Embulk v0.10.35 to v0.10.36, and 4 months between Embulk v0.10.36 and v0.10.37.
 
 We concluded that it is not healthy as an open-source project, especially like Embulk which needs "the eco-system of plugins by other developers", after discussing further in Treasure Data.
 
