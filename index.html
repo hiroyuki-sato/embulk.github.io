@@ -1,7 +1,23 @@
 ---
-layout: home
-title: Embulk
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+<meta charset="utf-8">
+<meta property="og:title" content="Embulk"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}"/>
+<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ "/assets/images/embulk-logo-og.png" | relative_url }}"/>
+<meta property="og:description" content="Embulk is an open-source pluggable bulk data loader. It helps loading data to/from varieties of storages, file formats, databases, cloud services, and else."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:site_name" content="Embulk"/>
+<meta name="twitter:card" content="summary"/>
+<title>Embulk</title>
+<link rel="stylesheet" href="{{ "/assets/css/home.css" | relative_url }}" type="text/css" />
+</head>
+<body id="home">
+{% include header.html %}
+<main>
 <section id="summary">
   <blockquote id="summary-block">
     <div class="summary-main">Pluggable, Multi-source/destination, Open-sourced Bulk Data Loader</div>
@@ -92,3 +108,7 @@ embulk run config.yml
     </section>
   </div> <!-- right -->
 </div> <!-- two-columns -->
+</main>
+{% include footer.html %}
+</body>
+</html>
