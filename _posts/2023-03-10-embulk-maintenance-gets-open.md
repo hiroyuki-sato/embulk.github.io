@@ -1,8 +1,8 @@
 ---
 layout: posts
 title: "Embulk maintenance goes open"
-date: 2023-03-10 15:43:30 +0900
-last_modified_at: 2023-03-10 16:21:00 +0900
+date: 2023-03-10
+description: Embulk has been an open-source project since its beginning. The license of its core is Apache-2.0, then it is definitely "open source". But, the maintenance and the design decisions had been made exclusively by Treasure Data so far practically.
 author: "dmikurube"
 ---
 
