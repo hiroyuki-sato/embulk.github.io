@@ -17,7 +17,7 @@ What is open, in particular?
 
 The two below is the major updates.
 
-1. Establish a decision-making process, expecially for big changes that impact plugin compatibilities
+1. Establish a decision-making process, especially for big changes that impact plugin compatibilities
 2. Involve contributors out of Treasure Data in Embulk's decision making
 
 EEP (Embulk Enhancement Proposal)
