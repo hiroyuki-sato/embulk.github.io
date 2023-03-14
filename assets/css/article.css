@@ -7,7 +7,7 @@ body#article main {
 
 body#article main article {
     margin: 0 auto 0 auto;
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
     max-width: 960px;
     background-color: #ffffff;
     border-left: solid 1px #ccbbaa;
@@ -43,7 +43,7 @@ body#article main article ul#collation a {
 
 body#article main article section#body {
     margin: 0 0.5rem 0 0.5rem;
-    padding: 1rem 1.5rem 1rem 1.5rem;
+    padding: 1rem 1rem 1rem 1rem;
     border-top: solid 1px #ccbbaa;
 }
 
