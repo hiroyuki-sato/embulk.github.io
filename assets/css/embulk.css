@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu");
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
 
 body {
@@ -7,7 +6,7 @@ body {
     padding: 0;
     top: 0;
     background-color: #ffffff;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: sans-serif;
 }
 
 header {

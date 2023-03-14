@@ -13,7 +13,8 @@ Sorry for the long silent interval. Embulk `v0.9.8` is out yesterday with some f
 
 Then, for future updates, we'd like to have your feedbacks on two topics about your Embulk usage.
 
-### 1. Usage of "`EmbulkEmbed`" and "`EmbulkService`"
+1) Usage of "`EmbulkEmbed`" and "`EmbulkService`"
+==================================================
 
 Embulk has a way to be embedded in your Java program by classes of "`EmbulkEmbed`" and "`EmbulkService`". We expect most users are using Embulk from CLI, but some users may be using these "`EmbulkEmbed`" or "`EmbulkService`".
 
@@ -25,7 +26,8 @@ If you use "`EmbulkEmbed`" or "`EmbulkService`" in your environment, please let 
 
 [https://github.com/embulk/embulk/issues/1047](https://github.com/embulk/embulk/issues/1047)
 
-### 2. "`BINARY`" type
+2) "`BINARY`" type
+===================
 
 There has been a discussion whether we need a new "`BINARY`" type, or not. At first we thought to introduce the `BINARY` type, but very few people wanted it when we asked in a meetup with 100+ people.
 

@@ -15,38 +15,34 @@
 <meta name="twitter:card" content="summary"/>
 <title>{{ page.title }} | Embulk</title>
 <link rel="icon" href="{{ "/assets/images/embulk-logo.svg" | relative_url }}" type="image/svg+xml">
-<link rel="stylesheet" href="{{ "/assets/css/page.css" | relative_url }}" type="text/css" />
+<link rel="stylesheet" href="{{ "/assets/css/article.css" | relative_url }}" type="text/css" />
 </head>
-<body id="post">
+<body id="article">
   {% include header.html %}
   <main>
     <article>
-      <section id="article">
-        <h2>{{ page.title }}</h2>
-        <div class="content">
-          {{ content }}
-        </div>
-      </section>
-      <section id="collation">
-        <ul>
+      <h1>{{ page.title }}</h1>
+      <ul id="collation">
 {% if page.author %}
-          <li>Author: <a href="https://github.com/{{ page.author }}">@{{ page.author }}</a></li>
+        <li>Author: <a href="https://github.com/{{ page.author }}">@{{ page.author }}</a></li>
 {% endif %}
 {% if page.authors %}
 {% assign authorCount = page.authors | size %}
 {% if authorCount == 0 %}
 {% elsif authorCount == 1 %}
-          <li>Author: <a href="https://github.com/{{ page.authors | first }}">@{{ page.authors | first }}</a></li>
+        <li>Author: <a href="https://github.com/{{ page.authors | first }}">@{{ page.authors | first }}</a></li>
 {% else %}
-          <li>Authors:
+        <li>Authors:
     {% for author in page.authors %}
-            <a href="https://github.com/{{ author }}">@{{ author }}</a>
+          <a href="https://github.com/{{ author }}">@{{ author }}</a>
     {% endfor %}
-          </li>
+        </li>
 {% endif %}
 {% endif %}
-          <li>Created at: {{ page.date | date: "%B %d, %Y" }}</li>
-        </ul>
+        <li>Created at: {{ page.date | date: "%Y-%m-%d" }}</li>
+      </ul>
+      <section id="body">
+        {{ content }}
       </section>
     </article>
   </main>

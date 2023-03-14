@@ -13,14 +13,15 @@ Embulk has been an open-source project since its beginning. The license of its c
 We decided to change Embulk's maintenance to be open. This article explains the new maintenance methods. Some of things are yet under preparation, though.
 
 What is open, in particular?
------------------------------
+=============================
 
 The two below is the major updates.
 
 1. Establish a decision-making process, expecially for big changes that impact plugin compatibilities
 2. Involve contributors out of Treasure Data in Embulk's decision making
 
-### EEP (Embulk Enhancement Proposal)
+EEP (Embulk Enhancement Proposal)
+----------------------------------
 
 We established a decision-making process for big changes at first. More precisely speaking, we defined processes for writing and reviewing the [Embulk Enhancement Proposal (EEP)](https://github.com/embulk/embulk/blob/master/docs/eeps/eep-0001.md) documents.
 
@@ -36,7 +37,8 @@ On the other hand, Embulk has recently been performing the "v0.10" major revisio
 
 See also: ["For Embulk users: What will change in v0.11 and v1.0?"](https://www.embulk.org/articles/2021/04/27/changes-in-v0.11.html)
 
-### Embulk core team
+Embulk core team
+-----------------
 
 The EEP-1 above defines the "Embulk core team". This core team would be the decision maker, which consist of 3 types of members below.
 
@@ -52,12 +54,13 @@ The aurhor ([@dmikurube](https://github.com/dmikurube)) is expected to make fina
 
 However, we wanted to have more committers, and to make decisions by the entire core team.
 
-### CLA (Contributor License Agreement)
+CLA (Contributor License Agreement)
+------------------------------------
 
 We consider the necessity of so-called [Contributor License Agreement (CLA)](https://en.wikipedia.org/wiki/Contributor_License_Agreement), but not yet. It may be needed in the future although we don't want to make it too much formal.
 
 Who are the first core team members?
--------------------------------------
+=====================================
 
 Listed in the order of their responses to join the core team.
 
@@ -82,7 +85,7 @@ Listed in the order of their responses to join the core team.
   * From [trocco](https://trocco.io/) that provides SaaS using Embulk, and maintains many plugins
 
 Why to get open?
------------------
+=================
 
 By maintaining the Embulk core exclusively by Treasure Data, we sometimes had biased viewpoints about compatibility checks and reviews, and suspended development for a while for some in-house reasons. We sometimes broke the compatibility unintentionally. We had a half year interval between Embulk v0.10.35 to v0.10.36, and 4 months between Embulk v0.10.36 and v0.10.37.
 

@@ -1,0 +1,207 @@
+@import url("./embulk.css");
+
+body#article main {
+    background-color: #fff8ee;
+    margin: 0;
+}
+
+body#article main article {
+    margin: 0 auto 0 auto;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    max-width: 960px;
+    background-color: #ffffff;
+    border-left: solid 1px #ccbbaa;
+    border-right: solid 1px #ccbbaa;
+    line-height: 1.75;
+}
+
+body#article main article h1 {
+    font-size: 160%;
+    margin: 0 0 1rem 0;
+    padding: 1rem 1rem 0 1rem;
+}
+
+body#article main article ul#collation {
+    font-size: 90%;
+    font-weight: normal;
+    text-align: right;
+    margin: 1rem 0 0 0;
+    padding: 0 1rem 1rem 1rem;
+}
+
+body#article main article ul#collation > li {
+    display: inline;
+    text-decoration: none;
+    padding: 0 0.5rem !important;
+    list-style-image: none;
+    list-style-type: none;
+}
+
+body#article main article ul#collation a {
+    font-weight: normal;
+}
+
+body#article main article section#body {
+    margin: 0 0.5rem 0 0.5rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    border-top: solid 1px #ccbbaa;
+}
+
+body#article main article section#body h1 {
+    font-size: 140%;
+    padding: 0 0 2px 0;
+    margin: 0 0 1.5rem 0;
+    border-bottom: solid 1px #cccccc;
+}
+
+body#article main article section#body h2 {
+    font-size: 110%;
+    padding: 0 0 1px 0;
+    margin: 0 0 1.5rem 0;
+    border-bottom: solid 1px #cccccc;
+}
+
+body#article main article section#body div.footnotes::before {
+    display: block;
+    content: "Footnotes";
+    margin: 1.5rem 0 1.2rem 0;
+    padding: 1.5rem 0 0 0;
+    border-top: dotted 1px #999999;
+    color: #333333;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+span.collation {
+    font-size: 90%;
+    font-weight: normal;
+}
+
+p > code {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #f7f7f7;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    color: #333333;
+}
+
+pre {
+    background-color: #eeeeee;
+    margin-left: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    overflow-x: auto;
+}
+
+pre > code {
+    font-family: 'Roboto Mono', monospace;
+    line-height: 180%;
+    color: black;
+}
+
+table {
+    margin-top: 1.5em;
+    margin-bottom: 2.5em;
+    margin-left: 2em;
+    border-collapse:  collapse;
+}
+
+table th {
+    font-weight: bold;
+    text-align: left;
+    border-bottom: solid 2px;
+    padding-right: 1em;
+}
+
+table td {
+    border-bottom: solid 1px;
+    padding-right: 1em;
+}
+
+aside.note {
+    -webkit-border-radius: 10px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border-style: dotted;
+    border-width: thin;
+    border-color: #dcdcdc;
+    background-color: #e4ffde;
+}
+
+aside.note > h4 {
+    padding: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+aside.note > p {
+    padding: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+}
+
+aside.hint {
+    -webkit-border-radius: 10px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border-style: dotted;
+    border-width: thin;
+    border-color: #dcdcdc;
+    background-color: #ffffcc;
+}
+
+aside.hint > h4 {
+    padding: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+aside.hint > p {
+    padding: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+}
+
+iframe#slideshare {
+    border: 1px solid #cccccc;
+    margin-bottom: 5px;
+    max-width: 100%;
+}
+
+@media screen and (min-width: 601px) {
+    div.two-columns {
+        display: -webkit-flex;
+        display: flex;
+    }
+
+    div.two-columns > div.left {
+        width: 50%;
+        min-width: 0;
+    }
+
+    div.two-columns > div.right {
+        width: 50%;
+        min-width: 0;
+    }
+}
+
+div.two-columns > div.left, div.right {
+    margin-left: 3em;
+    margin-right: 3em;
+}
