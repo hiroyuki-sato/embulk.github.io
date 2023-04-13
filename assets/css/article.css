@@ -72,12 +72,28 @@ body#article main article section#body div.footnotes::before {
     font-weight: bold;
 }
 
+body#article main article section#body blockquote.block-info {
+    border: solid 1px #ccccbb;
+    background-color: #ffffee;
+    padding: 0.3rem 2rem 0.3rem 2rem;
+}
+
 span.collation {
     font-size: 90%;
     font-weight: normal;
 }
 
 p > code {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #f7f7f7;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    color: #333333;
+}
+
+ul code {
     font-family: 'Roboto Mono', monospace;
     background-color: #f7f7f7;
     padding-left: 2px;
