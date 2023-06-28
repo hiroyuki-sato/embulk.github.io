@@ -94,6 +94,20 @@ source ~/.bashrc</code></pre>
       <h3>Windows</h3>
       <pre><code>PowerShell -Command "&amp; {[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::TLS12; Invoke-WebRequest http://dl.embulk.org/embulk-latest.jar -OutFile embulk.bat}"</code></pre>
 
+      <p>In the Embulk v0.9, setup complete. Go to Next Steps.</p>
+
+      <h3>Install JRuby</h3>
+      <p>Download JRuby 9.x.y.z Complete jar from <a href="https://www.jruby.org">JRuby.org</a>. And put it in a favorite place..</p>
+      <h3>Setup embulk.properties</h3>
+      <p>Create the embulk.properties file in the $HOME/.embulk directory.</p>
+      <pre><code># embulk.properties
+jruby=file:///path/to/jruby-complete-9.x.y.z.jar</code></pre>
+      <h3>Install some gems</h3>
+      <pre><code>embulk gem install embulk
+embulk gem install msgpack
+embulk gem install bundler
+embulk gem install liquid</code></pre>
+
       <h3>Next steps</h3>
       <p>The <code>embulk example</code> command generates an example CSV file.</p>
       <p>You can try Embulk quickly by:</p>
