@@ -1,9 +1,9 @@
 ---
 layout: posts
-title: `embulk gem install` may fail in Embulk v0.9: incompatibility with RubyGems
+title: "'embulk gem install' may fail in Embulk v0.9: incompatibility with RubyGems"
 date: 2023-07-28
 last_modified_at: 2023-07-28
-description: `embulk gem install` may start failing in Embulk v0.9 even if the target plugin Gem exists at rubygems.org. This article explains the issue, and how to resolve it.
+description: "'embulk gem install' may start failing in Embulk v0.9 even if the target plugin Gem exists at rubygems.org. This article explains the issue, and how to resolve it."
 author: "hiroyuki-sato"
 ---
 
