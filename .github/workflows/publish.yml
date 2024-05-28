@@ -1,0 +1,13 @@
+name: Publish
+jobs:
+  publish:
+#    environment:
+#      name: maven-central
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+    steps:
+    - uses: actions/checkout@v4
+    - name: Configure GitHub Pages
+      uses: actions/configure-pages@v3
+      static_site_generator: jekyll-gh-pages
