@@ -11,4 +11,3 @@ jobs:
     - uses: actions/checkout@v4
     - name: Configure GitHub Pages
       uses: actions/configure-pages@v3
-        static_site_generator: jekyll-gh-pages
